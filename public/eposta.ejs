@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gelen E-posta</title>
+<link rel="stylesheet" href="/style1.css"> <!-- CSS dosyasını bağlayın -->
+</head>
+<body>
+<div class="container">
+<h2>Gelen E-posta</h2>
+<p id="eposta-placeholder">Eposta burada görünecek</p> <!-- Eposta değerini göstereceğimiz bir yer -->
+</div>
+
+<script>
+// Express'ten gönderilen eposta değerini almak için
+var eposta = "<%= eposta %>";
+// Eposta değerini HTML içerisindeki p etiketi içine yerleştirme
+document.getElementById("eposta-placeholder").innerText = eposta;
+</script>
+</body>
+</html>

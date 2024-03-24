@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-posta oluştur</title>
+<link rel="stylesheet" href="/style.css"> <!-- CSS dosyasını bağlayın -->
+</head>
+<body>
+<div class="container">
+<h2>E-posta oluştur</h2>
+<form id="myForm">
+  <label for="ad">Adınız:</label><br>
+  <input type="text" id="ad" name="ad"><br>
+  <label for="numara">Okul numaranız:</label><br>
+  <input type="number" id="numara" name="numara"><br><br>
+  <button type="button" onclick="formuGonder('olustur')">E-posta oluştur </button>
+  <button type="button" onclick="formuGonder('')">Ana sayfaya yönlendir</button>
+</form>
+</div>
+
+<script>
+function formuGonder(action) {
+  var form = document.getElementById("myForm");
+  form.action = "/" + action; // action değerine göre rotayı belirle
+  form.submit(); // formu gönder
+}
+</script>
+
+</body>
+</html>
